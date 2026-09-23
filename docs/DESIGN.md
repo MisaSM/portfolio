@@ -44,6 +44,8 @@ Two families with clean roles. Serif for anything read as identity; sans for any
 | Section heading (h2) | 40px / 1.1 | 32px | Bodoni italic 400 |
 | Project title (h3) | 60px / 1 | 42px | Bodoni roman 400, letter-spacing -0.02em |
 | Project description | 20px / 1.55 | 17px / 1.55 | Grotesk, max ~34em |
+| Subsection heading ("Earlier work") | 34px / 1.1 | 28px / 1.1 | Bodoni italic 400 |
+| Earlier-work organization (h4) | 19px / 1.35 | 18px / 1.35 | Grotesk 500 |
 | Problem title (h4) | 25px / 1.2 | 22px | Bodoni italic |
 | Body | 16px / 1.65 | 15px / 1.65 | Max 62ch |
 | Field labels (dt, "Built with", "Tech") | 17px | 15px | Bodoni italic, muted |
