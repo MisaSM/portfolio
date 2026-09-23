@@ -13,6 +13,7 @@ export const en: SiteContent = {
   },
 
   header: {
+    skipLink: 'Skip to content',
     homeLabel: 'Misa, home',
     navLabel: 'Primary',
     nav: [
