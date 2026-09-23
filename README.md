@@ -27,6 +27,7 @@ The dev server runs at http://localhost:5173.
 | `pnpm lint`      | Lint with ESLint (typescript-eslint, React Hooks, a11y) |
 | `pnpm format`    | Format everything with Prettier                         |
 | `pnpm fonts`     | Regenerate the subset woff2 fonts from `assets/fonts/`  |
+| `pnpm brand`     | Regenerate favicons and the social preview image        |
 
 ## Project structure
 
@@ -34,7 +35,8 @@ The dev server runs at http://localhost:5173.
 assets/fonts/    Source font files and licenses (not served)
 docs/            Design spec, build plan and reference artboards
 public/          Static assets (woff2 fonts, résumé, favicons)
-scripts/         Build helpers (font subsetting)
+build/           Vite prerender plugin
+scripts/         Asset generators (fonts, favicons, social preview)
 src/
   components/    Reusable components
   content/       All site copy as typed data
@@ -48,4 +50,6 @@ GitHub Actions (`.github/workflows/ci.yml`) runs on every pull request and on pu
 
 ## Deployment
 
-Vercel builds the project with its Vite preset (`pnpm build`, output `dist/`). No extra configuration is needed.
+Vercel builds the project with its Vite preset (output `dist/`). No extra configuration is needed.
+
+The page is prerendered to static HTML during `vite build`, so it works without JavaScript and link previews see the real content. Canonical and preview-image URLs use Vercel's `VERCEL_PROJECT_PRODUCTION_URL`, which follows a custom domain automatically once one is added.

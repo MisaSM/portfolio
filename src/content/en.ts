@@ -6,6 +6,11 @@ const resumeHref = '#'
 export const en: SiteContent = {
   lang: 'en',
 
+  meta: {
+    ogImageAlt:
+      'Misa Sarabia Molina, Full-Stack Software Developer, beside a red anemone on a dark background.',
+  },
+
   person: {
     name: 'Misa',
     fullName: 'Misa Sarabia Molina',

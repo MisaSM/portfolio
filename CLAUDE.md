@@ -17,6 +17,7 @@ pnpm typecheck   # tsc -b across app and node configs
 pnpm lint        # ESLint (typescript-eslint type-checked, react-hooks, jsx-a11y)
 pnpm format      # Prettier, including Tailwind class sorting
 pnpm fonts       # regenerate public/fonts/*.woff2 from assets/fonts/ (commit the output)
+pnpm brand       # regenerate favicons and og.png from the anemone and content (needs local Chrome; commit the output)
 ```
 
 CI runs install, `typecheck`, `lint` and `build` on every pull request and on pushes to `main`. Run all three locally before pushing.
@@ -29,6 +30,8 @@ CI runs install, `typecheck`, `lint` and `build` on every pull request and on pu
 - `src/styles/`: `theme.css` (tokens: colors, font families, type scale), `fonts.css` (`@font-face`), `base.css` (page defaults, focus ring)
 - `public/`: static assets served as-is (subset woff2 fonts, résumé, favicons)
 - `assets/fonts/`: source TTFs and licenses, not served; `scripts/build-fonts.js` turns them into `public/fonts/`
+- `build/prerender.ts`: Vite plugin that prerenders the page into `index.html` during `vite build` (via `src/entry-server.tsx`), including the head metadata from `src/head.ts`. The client hydrates it (`src/main.tsx`). The canonical and preview-image URLs come from Vercel's `VERCEL_PROJECT_PRODUCTION_URL`
+- Rendering must stay deterministic: no `window`, dates or randomness during render, or hydration will mismatch. Browser-only work goes in effects or event handlers
 
 ## Conventions
 
