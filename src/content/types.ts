@@ -125,9 +125,16 @@ export interface ContactContent {
   links: Link[]
 }
 
+/** Page metadata beyond what the sections already say. */
+export interface MetaContent {
+  /** Alt text for the 1200×630 social preview image (public/og.png). */
+  ogImageAlt: string
+}
+
 export interface SiteContent {
   /** BCP 47 language tag for <html lang>. */
   lang: string
+  meta: MetaContent
   person: Person
   header: HeaderContent
   hero: HeroContent

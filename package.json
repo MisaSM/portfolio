@@ -14,7 +14,8 @@
     "typecheck": "tsc -b",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "fonts": "node scripts/build-fonts.js"
+    "fonts": "node scripts/build-fonts.js",
+    "brand": "node scripts/build-brand.js"
   },
   "dependencies": {
     "react": "^19.3.0",
