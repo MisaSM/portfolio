@@ -8,7 +8,7 @@ interface ContactProps {
 }
 
 const textLink =
-  'underline decoration-1 underline-offset-[6px] transition-colors hover:decoration-accent-text'
+  'inline-block py-1 underline decoration-1 underline-offset-[6px] transition-[color,border-color,text-decoration-color] hover:decoration-accent-text'
 
 /**
  * Contact: the email as a mailto link, the copy button with its live status,
@@ -21,7 +21,7 @@ export function Contact({ email, content }: ContactProps) {
       <div className="@container flex flex-col items-start gap-6 lg:gap-9">
         <a
           href={`mailto:${email}`}
-          className="font-serif text-email wrap-anywhere italic underline decoration-rule decoration-1 underline-offset-[7px] transition-colors hover:decoration-accent-text lg:tracking-[-0.015em] lg:underline-offset-[14px]"
+          className="font-serif text-email wrap-anywhere italic underline decoration-rule decoration-1 underline-offset-[7px] transition-[color,border-color,text-decoration-color] hover:decoration-accent-text lg:tracking-[-0.015em] lg:underline-offset-[14px]"
         >
           {email}
         </a>

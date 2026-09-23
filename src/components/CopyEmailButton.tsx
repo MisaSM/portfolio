@@ -55,7 +55,7 @@ export function CopyEmailButton({ email, labels, messages }: CopyEmailButtonProp
         onClick={() => {
           void copy()
         }}
-        className="inline-grid h-12 w-full cursor-pointer place-items-center rounded-full border border-muted px-6.5 text-nav leading-none font-medium tracking-[0.01em] transition-colors hover:border-accent-text hover:text-accent-text lg:w-auto"
+        className="inline-grid h-12 w-full cursor-pointer place-items-center rounded-full border border-muted px-6.5 text-nav leading-none font-medium tracking-[0.01em] transition-[color,border-color,text-decoration-color] hover:border-accent-text hover:text-accent-text lg:w-auto"
       >
         {/*
           Both labels share one grid cell so the button keeps the wider one's

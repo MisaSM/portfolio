@@ -24,6 +24,8 @@ const stemOverlap = `${String(((400 - STEM_TOP) / 400) * 100)}%`
 
 interface AnemoneProps {
   className?: string
+  /** Extra classes for the stem SVG, e.g. a mask that fades it out. */
+  stemClassName?: string
 }
 
 /**
@@ -32,7 +34,7 @@ interface AnemoneProps {
  * stem ends exactly at the element's bottom edge. Position and size the
  * element from outside. Decorative, so hidden from assistive tech.
  */
-export function Anemone({ className = '' }: AnemoneProps) {
+export function Anemone({ className = '', stemClassName = '' }: AnemoneProps) {
   return (
     <div aria-hidden="true" className={`flex flex-col ${className}`}>
       <svg viewBox="0 0 400 400" className="relative z-10 aspect-square w-full">
@@ -91,7 +93,7 @@ export function Anemone({ className = '' }: AnemoneProps) {
       <svg
         viewBox="0 0 400 1000"
         preserveAspectRatio="none"
-        className="min-h-0 w-full flex-1"
+        className={`min-h-0 w-full flex-1 ${stemClassName}`}
         style={{ marginTop: `-${stemOverlap}` }}
       >
         <path
