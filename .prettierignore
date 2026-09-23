@@ -1,0 +1,5 @@
+dist
+pnpm-lock.yaml
+public
+# Spec and design artboards are source material; never reformat them.
+docs
