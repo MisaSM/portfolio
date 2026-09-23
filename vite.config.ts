@@ -3,10 +3,11 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { prerender } from './build/prerender.ts'
 
-// On Vercel this is the production domain (the custom domain once one is
-// set), even for preview deployments. Local builds fall back to the preview URL.
-const productionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL
-const siteUrl = productionHost ? `https://${productionHost}` : 'http://localhost:4173'
+// The public address of the site: used for the canonical URL and the social
+// preview image, and printed on the résumé. Change it here when a custom
+// domain is added. (Vercel's VERCEL_PROJECT_PRODUCTION_URL isn't used: it
+// ignores *.vercel.app aliases and picked the auto-generated deployment host.)
+const siteUrl = 'https://anemone-dev.vercel.app'
 
 // https://vite.dev/config/
 export default defineConfig({

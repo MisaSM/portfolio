@@ -23,7 +23,7 @@ export function App() {
           <Stack content={content.stack} />
           <Contact email={content.person.email} content={content.contact} />
         </main>
-        {/* Placeholder until the footer is designed; keeps the landmark in place. */}
+        {/* The full name connects the site to the résumé (DESIGN.md, "Name"). */}
         <footer className="border-t border-rule px-6 py-6 lg:px-24">
           <p className="text-meta text-muted">{content.person.fullName}</p>
         </footer>

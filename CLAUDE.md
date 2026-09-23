@@ -30,7 +30,7 @@ CI runs install, `typecheck`, `lint` and `build` on every pull request and on pu
 - `src/styles/`: `theme.css` (tokens: colors, font families, type scale), `fonts.css` (`@font-face`), `base.css` (page defaults, focus ring)
 - `public/`: static assets served as-is (subset woff2 fonts, résumé, favicons)
 - `assets/fonts/`: source TTFs and licenses, not served; `scripts/build-fonts.js` turns them into `public/fonts/`
-- `build/prerender.ts`: Vite plugin that prerenders the page into `index.html` during `vite build` (via `src/entry-server.tsx`), including the head metadata from `src/head.ts`. The client hydrates it (`src/main.tsx`). The canonical and preview-image URLs come from Vercel's `VERCEL_PROJECT_PRODUCTION_URL`
+- `build/prerender.ts`: Vite plugin that prerenders the page into `index.html` during `vite build` (via `src/entry-server.tsx`), including the head metadata from `src/head.ts`. The client hydrates it (`src/main.tsx`). The canonical and preview-image URLs use the `siteUrl` constant in `vite.config.ts` (currently `https://anemone-dev.vercel.app`); update it if the domain changes
 - Rendering must stay deterministic: no `window`, dates or randomness during render, or hydration will mismatch. Browser-only work goes in effects or event handlers
 
 ## Conventions
