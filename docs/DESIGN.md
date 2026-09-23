@@ -75,4 +75,4 @@ Rules: sentence case everywhere, no all-caps labels, tabular numerals for dates.
 
 ## Motion
 
-One orchestrated moment only. On load, the petals unfurl: scale from 0.55 and rotate from -14deg, 1.2s, `cubic-bezier(.2,.75,.15,1)`, 70ms stagger. The center fades in at 550ms. Disabled entirely under `prefers-reduced-motion`. No other ambient animation, and no scroll-triggered reveals. Hover transitions are fine.
+One orchestrated moment only. On load, the petals unfurl: scale from 0.55 and rotate from -14deg, 1.2s, `cubic-bezier(.2,.75,.15,1)`, 70ms stagger. The center fades in at 550ms. On mobile, the stem starts at full length and its lower part fades away between 300ms and 900ms (ease-out), settling above the hero text. Disabled entirely under `prefers-reduced-motion`. No other ambient animation, and no scroll-triggered reveals. Hover transitions are fine.

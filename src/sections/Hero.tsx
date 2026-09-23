@@ -24,10 +24,11 @@ export function Hero({ person, content }: HeroProps) {
         The 230px flower sits at the section top and the greeting starts 250px
         down, so in stem coordinates (the stem begins 131px down) the fade runs
         from the bract collar (~212px) to just above the greeting (~246px).
+        On load (motion-safe) the stem starts full length and fades up to that.
       */}
       <Anemone
         className="absolute top-0 -right-14.5 bottom-0 w-57.5 lg:top-10 lg:right-26 lg:w-(--flower-w)"
-        stemClassName="max-lg:mask-[linear-gradient(to_bottom,black_81px,transparent_115px)]"
+        stemClassName="[--stem-fade-start:81px] [--stem-fade-end:115px] max-lg:mask-[linear-gradient(to_bottom,black_var(--stem-fade-start),transparent_var(--stem-fade-end))] max-lg:motion-safe:animate-stem-fade"
       />
 
       <div className="relative pt-62.5 lg:max-w-[calc(100%-var(--flower-w)-2.5rem)] lg:pt-30">
