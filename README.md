@@ -52,4 +52,4 @@ GitHub Actions (`.github/workflows/ci.yml`) runs on every pull request and on pu
 
 Vercel builds the project with its Vite preset (output `dist/`). No extra configuration is needed.
 
-The page is prerendered to static HTML during `vite build`, so it works without JavaScript and link previews see the real content. Canonical and preview-image URLs use Vercel's `VERCEL_PROJECT_PRODUCTION_URL`, which follows a custom domain automatically once one is added.
+The page is prerendered to static HTML during `vite build`, so it works without JavaScript and link previews see the real content. The live site is at https://anemone-dev.vercel.app. Canonical and preview-image URLs use the `siteUrl` constant in `vite.config.ts`; change it there if a custom domain is added.

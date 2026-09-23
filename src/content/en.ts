@@ -1,7 +1,7 @@
 import type { SiteContent } from './types'
 
-// Placeholder until the résumé PDF is added (issue "Résumé, final links and launch").
-const resumeHref = '#'
+// The web version of the résumé (no phone number), served from public/.
+const resumeHref = '/misasm-resume.pdf'
 
 export const en: SiteContent = {
   lang: 'en',
