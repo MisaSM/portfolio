@@ -2,6 +2,8 @@
 
 Source of truth for the visual design. The artboards in `reference/` show the finished layout and contain the exact copy and the anemone SVG. They were exported from a design tool and use template syntax (`{{t.ink}}`, `<x-dc>`, `<sc-if>`), so read them as reference and rebuild in React; never copy their markup wholesale. When they disagree with this file, this file wins.
 
+**Name.** "Anemone" in the artboards is a placeholder. The hero name (and the header home link's accessible name) is **Misa**, matching GitHub, LinkedIn and the résumé. The full name, **Misa Sarabia Molina**, is used where the site is connected to the résumé: page title, metadata and social preview. The anemone remains the flower motif, header mark and favicon.
+
 ## Principles
 
 - **No terminal or CLI styling, anywhere.** No monospace fonts, no command prompts, no bracketed nav, no `//` code comments used as labels, no fake shell output. "Developer" comes through the work itself and through how well the site is built.
