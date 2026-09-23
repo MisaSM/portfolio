@@ -25,6 +25,8 @@ export interface Person {
 }
 
 export interface HeaderContent {
+  /** First focusable element; jumps past the header to <main>. */
+  skipLink: string
   /** Accessible name of the anemone home link. */
   homeLabel: string
   /** Accessible name of the primary nav landmark. */

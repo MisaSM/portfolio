@@ -23,6 +23,27 @@
   --font-sans: 'Schibsted Grotesk', system-ui, sans-serif;
 
   /*
+   * Motion: the one orchestrated moment. Petals unfurl (staggered 70ms by
+   * inline animation-delay), then the center settles in at 550ms. Only ever
+   * applied behind motion-safe:, so reduced motion shows the flower at rest.
+   */
+  --animate-unfurl: unfurl 1.2s cubic-bezier(0.2, 0.75, 0.15, 1) both;
+  --animate-settle: settle 0.9s ease-out 0.55s both;
+
+  @keyframes unfurl {
+    from {
+      opacity: 0;
+      transform: scale(0.55) rotate(-14deg);
+    }
+  }
+
+  @keyframes settle {
+    from {
+      opacity: 0;
+    }
+  }
+
+  /*
    * Type scale. Values here are mobile; the block below raises them to the
    * desktop sizes at the lg breakpoint, so one class (e.g. text-name) covers
    * both.

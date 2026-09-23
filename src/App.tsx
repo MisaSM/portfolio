@@ -1,22 +1,27 @@
+import { SiteHeader } from './components/SiteHeader'
 import { content } from './content'
+import { Hero } from './sections/Hero'
 
-// Placeholder shell until the header, hero and sections are built.
 export function App() {
-  const { person, hero } = content
-
   return (
-    <div className="flex min-h-dvh flex-col px-6 lg:px-24">
-      <header className="border-b border-rule py-6">
-        <p className="text-nav">{person.name}</p>
-      </header>
-      <main className="flex-1 py-14 lg:py-24">
-        <p className="font-serif text-greeting text-muted italic">{hero.greeting}</p>
-        <h1 className="font-serif text-name italic">{person.name}</h1>
-        <p className="mt-6 text-role font-medium">{hero.role}</p>
-      </main>
-      <footer className="border-t border-rule py-6">
-        <p className="text-meta text-muted">{person.fullName}</p>
-      </footer>
-    </div>
+    <>
+      <a
+        href="#main"
+        className="sr-only rounded-full bg-bg px-5 py-3 text-nav focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50"
+      >
+        {content.header.skipLink}
+      </a>
+
+      <div id="top" className="mx-auto max-w-360">
+        <SiteHeader content={content.header} />
+        <main id="main">
+          <Hero person={content.person} content={content.hero} />
+        </main>
+        {/* Placeholder until the footer is designed; keeps the landmark in place. */}
+        <footer className="border-t border-rule px-6 py-6 lg:px-24">
+          <p className="text-meta text-muted">{content.person.fullName}</p>
+        </footer>
+      </div>
+    </>
   )
 }
