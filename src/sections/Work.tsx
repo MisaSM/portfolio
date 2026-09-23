@@ -1,3 +1,4 @@
+import { EarlierWork } from '../components/EarlierWork'
 import { Project } from '../components/Project'
 import { Section } from '../components/Section'
 import type { WorkContent } from '../content'
@@ -6,7 +7,12 @@ interface WorkProps {
   content: WorkContent
 }
 
-/** Selected work: the flagship project first, each later one opened by a hairline. */
+const openedByHairline = 'border-t border-rule pt-12 lg:pt-18'
+
+/**
+ * Selected work: the flagship project first, then the others, then the
+ * compact earlier-work list. Everything after the first is opened by a hairline.
+ */
 export function Work({ content }: WorkProps) {
   return (
     <Section id="work" heading={content.heading}>
@@ -16,9 +22,10 @@ export function Work({ content }: WorkProps) {
             key={project.id}
             project={project}
             builtWithLabel={content.builtWithLabel}
-            className={i > 0 ? 'border-t border-rule pt-12 lg:pt-18' : ''}
+            className={i > 0 ? openedByHairline : ''}
           />
         ))}
+        <EarlierWork content={content.earlier} className={openedByHairline} />
       </div>
     </Section>
   )

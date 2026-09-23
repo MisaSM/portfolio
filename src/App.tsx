@@ -1,6 +1,7 @@
 import { SiteHeader } from './components/SiteHeader'
 import { content } from './content'
 import { Hero } from './sections/Hero'
+import { Stack } from './sections/Stack'
 import { Work } from './sections/Work'
 
 export function App() {
@@ -18,6 +19,7 @@ export function App() {
         <main id="main">
           <Hero person={content.person} content={content.hero} />
           <Work content={content.work} />
+          <Stack content={content.stack} />
         </main>
         {/* Placeholder until the footer is designed; keeps the landmark in place. */}
         <footer className="border-t border-rule px-6 py-6 lg:px-24">

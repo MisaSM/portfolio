@@ -62,6 +62,10 @@
   --text-project: 2.625rem;
   --text-project--line-height: 1;
   --text-project--letter-spacing: -0.02em;
+  --text-subsection: 1.75rem;
+  --text-subsection--line-height: 1.1;
+  --text-entry: 1.125rem;
+  --text-entry--line-height: 1.35;
   --text-problem: 1.375rem;
   --text-problem--line-height: 1.2;
   --text-body: 0.9375rem;
@@ -86,6 +90,8 @@
       --text-description: 1.25rem;
       --text-section: 2.5rem;
       --text-project: 3.75rem;
+      --text-subsection: 2.125rem;
+      --text-entry: 1.1875rem;
       --text-problem: 1.5625rem;
       --text-body: 1rem;
       --text-label: 1.0625rem;
