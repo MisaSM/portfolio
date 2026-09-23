@@ -1,0 +1,30 @@
+/*
+ * Self-hosted, subset woff2 files generated from assets/fonts/ by `pnpm fonts`.
+ * Bodoni Moda keeps its optical-size axis; weight is pinned to 400.
+ * The italic is the display face and is preloaded in index.html; keep the URL
+ * here and there identical.
+ */
+
+@font-face {
+  font-family: 'Bodoni Moda';
+  src: url('/fonts/bodoni-moda-roman.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bodoni Moda';
+  src: url('/fonts/bodoni-moda-italic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/fonts/schibsted-grotesk.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+}

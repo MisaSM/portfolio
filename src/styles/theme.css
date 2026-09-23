@@ -1,0 +1,86 @@
+/*
+ * Design tokens from docs/DESIGN.md. Tailwind's default colors and font
+ * families are cleared so only these exist (bg-bg, text-muted, border-rule,
+ * font-serif, text-name, ...). `static` emits every token as a CSS variable
+ * even before a utility uses it, so SVGs can reference var(--color-accent).
+ */
+
+@theme static {
+  /* Color: the Night palette. */
+  --color-*: initial;
+  --color-bg: #0f0b0c;
+  --color-ink: #efe6dc;
+  --color-muted: #a0938d;
+  --color-rule: #2e2426;
+  --color-accent: #9e2b3f;
+  --color-accent-deep: #721f2d;
+  --color-accent-text: #c07582;
+  --color-center: #0f0b0c;
+
+  /* Type: serif for identity, sans for information. No monospace. */
+  --font-*: initial;
+  --font-serif: 'Bodoni Moda', Didot, 'Bodoni 72', Georgia, serif;
+  --font-sans: 'Schibsted Grotesk', system-ui, sans-serif;
+
+  /*
+   * Type scale. Values here are mobile; the block below raises them to the
+   * desktop sizes at the lg breakpoint, so one class (e.g. text-name) covers
+   * both.
+   */
+  --text-name: 5.75rem;
+  --text-name--line-height: 0.9;
+  --text-name--letter-spacing: -0.035em;
+  --text-greeting: 1.3125rem;
+  --text-role: 1.125rem;
+  --text-summary: 1rem;
+  --text-summary--line-height: 1.6;
+  --text-section: 2rem;
+  --text-section--line-height: 1.1;
+  --text-project: 2.625rem;
+  --text-project--line-height: 1;
+  --text-project--letter-spacing: -0.02em;
+  --text-problem: 1.375rem;
+  --text-problem--line-height: 1.2;
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.65;
+  --text-label: 0.9375rem;
+  --text-meta: 0.875rem;
+  --text-stack: 1.5rem;
+  --text-stack--line-height: 1.2;
+  --text-email: 1.375rem;
+  --text-email--line-height: 1.1;
+  --text-nav: 0.9375rem;
+}
+
+@layer base {
+  :root {
+    @variant lg {
+      --text-name: 13rem;
+      --text-name--line-height: 0.86;
+      --text-greeting: 1.875rem;
+      --text-role: 1.5rem;
+      --text-summary: 1.1875rem;
+      --text-section: 2.5rem;
+      --text-project: 3.75rem;
+      --text-problem: 1.5625rem;
+      --text-body: 1rem;
+      --text-label: 1.0625rem;
+      --text-meta: 0.9375rem;
+      --text-stack: 2rem;
+      --text-email: 3.75rem;
+    }
+  }
+
+  /*
+   * Day palette, kept for a possible future light mode (not scheduled).
+   * Nothing sets data-theme yet.
+   */
+  [data-theme='day'] {
+    --color-bg: #f1ebe3;
+    --color-ink: #1c1315;
+    --color-muted: #6a5c57;
+    --color-rule: #d6cbc1;
+    --color-accent-text: #8e2739;
+    --color-center: #1c1315;
+  }
+}
