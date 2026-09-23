@@ -51,7 +51,7 @@ Two families with clean roles. Serif for anything read as identity; sans for any
 | Field labels (dt, "Built with", "Tech") | 17px | 15px | Bodoni italic, muted |
 | Meta (dates, team) | 15px | 14px | Grotesk, muted |
 | Core stack items | 32px / 1.2 | 24px | Bodoni roman |
-| Email | 60px / 1.1 | 22px | Bodoni italic, underline in `rule`, `accent-text` on hover |
+| Email | 60px / 1.1 | 22px / 1.4 | Bodoni italic, underline in `rule`, `accent-text` on hover. Never wraps: shrinks below these sizes when the column is too narrow for the full address |
 | Nav | 15px | 15px | Grotesk, sentence case |
 
 Rules: sentence case everywhere, no all-caps labels, tabular numerals for dates.

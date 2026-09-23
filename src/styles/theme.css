@@ -74,8 +74,13 @@
   --text-meta: 0.875rem;
   --text-stack: 1.5rem;
   --text-stack--line-height: 1.2;
-  --text-email: 1.375rem;
-  --text-email--line-height: 1.1;
+  /*
+   * The email address never wraps: it takes the spec size where that fits
+   * and otherwise shrinks to its container (the address is ~14.5em wide, so
+   * 6.8cqi keeps it inside). Needs an @container ancestor.
+   */
+  --text-email: min(1.375rem, 6.8cqi);
+  --text-email--line-height: 1.4;
   --text-nav: 0.9375rem;
 }
 
@@ -97,7 +102,8 @@
       --text-label: 1.0625rem;
       --text-meta: 0.9375rem;
       --text-stack: 2rem;
-      --text-email: 3.75rem;
+      --text-email: min(3.75rem, 6.8cqi);
+      --text-email--line-height: 1.1;
     }
   }
 
