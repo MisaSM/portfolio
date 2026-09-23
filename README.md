@@ -26,12 +26,15 @@ The dev server runs at http://localhost:5173.
 | `pnpm typecheck` | Run the TypeScript compiler without emitting            |
 | `pnpm lint`      | Lint with ESLint (typescript-eslint, React Hooks, a11y) |
 | `pnpm format`    | Format everything with Prettier                         |
+| `pnpm fonts`     | Regenerate the subset woff2 fonts from `assets/fonts/`  |
 
 ## Project structure
 
 ```
+assets/fonts/    Source font files and licenses (not served)
 docs/            Design spec, build plan and reference artboards
-public/          Static assets (fonts, résumé, favicons)
+public/          Static assets (woff2 fonts, résumé, favicons)
+scripts/         Build helpers (font subsetting)
 src/
   components/    Reusable components
   content/       All site copy as typed data

@@ -1,6 +1,5 @@
-@import 'tailwindcss';
-
-/*
- * Theme tokens (colors, fonts, type scale) from docs/DESIGN.md are added in
- * the "Design tokens and self-hosted fonts" issue, inside an @theme block.
- */
+/* Only scan src/ for class names; docs/ and the artboards would add stray utilities. */
+@import 'tailwindcss' source('../');
+@import './fonts.css';
+@import './theme.css';
+@import './base.css';
