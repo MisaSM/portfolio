@@ -10,7 +10,7 @@ export function App() {
     <>
       <a
         href="#main"
-        className="sr-only rounded-full bg-bg px-5 py-3 text-nav focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50"
+        className="sr-only rounded-full border border-muted bg-bg text-nav focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-5 focus:py-3"
       >
         {content.header.skipLink}
       </a>

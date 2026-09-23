@@ -30,7 +30,7 @@ export function SiteHeader({ content }: SiteHeaderProps) {
             <li key={item.target}>
               <a
                 href={`#${item.target}`}
-                className="inline-block py-3 text-muted transition-colors hover:text-ink"
+                className="inline-block py-3 text-muted transition-[color,border-color,text-decoration-color] hover:text-ink"
               >
                 {item.label}
               </a>
@@ -41,7 +41,7 @@ export function SiteHeader({ content }: SiteHeaderProps) {
 
       <a
         href={content.resume.href}
-        className="col-start-2 row-start-1 inline-flex h-11 items-center justify-self-end rounded-full border border-muted px-5 text-nav transition-colors hover:border-accent-text hover:text-accent-text lg:col-start-3"
+        className="col-start-2 row-start-1 inline-flex h-11 items-center justify-self-end rounded-full border border-muted px-5 text-nav transition-[color,border-color,text-decoration-color] hover:border-accent-text hover:text-accent-text lg:col-start-3"
       >
         {content.resume.label}
       </a>

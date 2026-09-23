@@ -19,7 +19,16 @@ export function Hero({ person, content }: HeroProps) {
       aria-labelledby="hero-title"
       className="relative overflow-x-clip px-6 pb-14 [--flower-w:clamp(16rem,28vw,25rem)] lg:px-24 lg:pb-24"
     >
-      <Anemone className="absolute top-0 -right-14.5 bottom-0 w-57.5 lg:top-10 lg:right-26 lg:w-(--flower-w)" />
+      {/*
+        Below lg the stem would run behind the text, so it fades out instead.
+        The 230px flower sits at the section top and the greeting starts 250px
+        down, so in stem coordinates (the stem begins 131px down) the fade runs
+        from the bract collar (~212px) to just above the greeting (~246px).
+      */}
+      <Anemone
+        className="absolute top-0 -right-14.5 bottom-0 w-57.5 lg:top-10 lg:right-26 lg:w-(--flower-w)"
+        stemClassName="max-lg:mask-[linear-gradient(to_bottom,black_81px,transparent_115px)]"
+      />
 
       <div className="relative pt-62.5 lg:max-w-[calc(100%-var(--flower-w)-2.5rem)] lg:pt-30">
         <p className="mb-0.5 ml-1 font-serif text-greeting text-muted italic lg:mb-1.5 lg:ml-2.5">
