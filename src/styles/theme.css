@@ -55,6 +55,8 @@
   --text-role: 1.125rem;
   --text-summary: 1rem;
   --text-summary--line-height: 1.6;
+  --text-description: 1.0625rem;
+  --text-description--line-height: 1.55;
   --text-section: 2rem;
   --text-section--line-height: 1.1;
   --text-project: 2.625rem;
@@ -81,6 +83,7 @@
       --text-greeting: 1.875rem;
       --text-role: 1.5rem;
       --text-summary: 1.1875rem;
+      --text-description: 1.25rem;
       --text-section: 2.5rem;
       --text-project: 3.75rem;
       --text-problem: 1.5625rem;

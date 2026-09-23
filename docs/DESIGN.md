@@ -43,6 +43,7 @@ Two families with clean roles. Serif for anything read as identity; sans for any
 | Summary | 19px / 1.6 | 16px / 1.6 | Max ~34em |
 | Section heading (h2) | 40px / 1.1 | 32px | Bodoni italic 400 |
 | Project title (h3) | 60px / 1 | 42px | Bodoni roman 400, letter-spacing -0.02em |
+| Project description | 20px / 1.55 | 17px / 1.55 | Grotesk, max ~34em |
 | Problem title (h4) | 25px / 1.2 | 22px | Bodoni italic |
 | Body | 16px / 1.65 | 15px / 1.65 | Max 62ch |
 | Field labels (dt, "Built with", "Tech") | 17px | 15px | Bodoni italic, muted |
