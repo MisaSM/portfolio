@@ -23,7 +23,7 @@ CI runs install, `typecheck`, `lint` and `build` on every pull request and on pu
 
 ## Layout
 
-- `src/content/`: all copy, as typed data
+- `src/content/`: all copy, as typed data. `types.ts` defines `SiteContent`, `en.ts` is the English copy, and `index.ts` exports the active `content`. Sections import from `./content` and receive their slice (`content.hero`, `content.work`, ...)
 - `src/sections/`: page sections (hero, work, stack, contact), which render content
 - `src/components/`: reusable pieces (anemone, project, claim diagram, copy button)
 - `src/styles/`: `theme.css` (tokens: colors, font families, type scale), `fonts.css` (`@font-face`), `base.css` (page defaults, focus ring)
